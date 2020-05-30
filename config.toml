@@ -1,0 +1,19 @@
+######################## default configuration ####################
+baseURL = "https://akhilesh006.github.io/javaprincipal/"
+name = "Java Principal"
+theme = "github-style"
+publishDir = "docs"
+copyright = "© 2019. Theme by <a href=\"https://github.com/MeiK2333/github-style\"><span>github-style</span></a>"
+
+[params]
+  author = "Akhilesh Dhar Dubey"
+  description = "Java Principal"
+  github = "https://github.com/akhilesh006"
+  facebook = "https://www.facebook.com/akhilesh006"
+  linkedin = "https://www.linkedin.com/in/akhileshmca"
+  twitter = "https://twitter.com/akhileshmca"
+  stackoverflow = "https://stackoverflow.com/users/1115406/akhilesh-dhar-dubey"
+  email = "2akhileshdubey@gmail.com"
+  avatar = "https://www.gravatar.com/avatar/552d6799ed1bcf1732e15cc1909020c0.png?size=300"
+  url = "https://www.linkedin.com/in/akhileshmca/"
+  keywords = "java, blog, deep learning"
