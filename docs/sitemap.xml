@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>http://javaprincipal.com/</loc>
-  </url>
-  
-  <url>
-    <loc>http://javaprincipal.com/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://javaprincipal.com/tags/</loc>
-  </url>
-  
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>https://akhilesh006.github.io/javaprincipal/en/sitemap.xml</loc>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>https://akhilesh006.github.io/javaprincipal/pt-br/sitemap.xml</loc>
+		
+	</sitemap>
+	
+</sitemapindex>
