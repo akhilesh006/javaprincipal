@@ -7,21 +7,18 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Akhilesh Dhar Dubey">
-    <meta name="description" content="Heap: Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
-  Young Generation Area:
- Eden Space: Newly created Objects goes in Eden Space. Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space. Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC.">
-    <meta name="keywords" content="blog,developer,personal">
+    <meta name="description" content="Heap Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
+- Young Generation Area:- Eden Space: Newly created Objects goes in Eden Space.- Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space.- Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC.">
+    <meta name="keywords" content="java, blog, deep learning">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Java Memory Model"/>
-<meta name="twitter:description" content="Heap: Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
-  Young Generation Area:
- Eden Space: Newly created Objects goes in Eden Space. Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space. Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC."/>
+<meta name="twitter:description" content="Heap Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
+- Young Generation Area:- Eden Space: Newly created Objects goes in Eden Space.- Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space.- Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC."/>
 
     <meta property="og:title" content="Java Memory Model" />
-<meta property="og:description" content="Heap: Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
-  Young Generation Area:
- Eden Space: Newly created Objects goes in Eden Space. Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space. Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC." />
+<meta property="og:description" content="Heap Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
+- Young Generation Area:- Eden Space: Newly created Objects goes in Eden Space.- Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space.- Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://akhilesh006.github.io/javaprincipal/posts/java/java-memory-model/" />
 <meta property="article:published_time" content="2020-05-31T03:49:42+05:30" />
@@ -130,12 +127,7 @@
         </div>
         <div class="post-meta">
           <div class="date">
-            <span class="posted-on">
-              <i class="fas fa-calendar"></i>
-              <time datetime='2020-05-31T03:49:42&#43;05:30'>
-                May 31, 2020
-              </time>
-            </span>
+            
             <span class="reading-time">
               <i class="fas fa-clock"></i>
               4-minute read
@@ -158,44 +150,34 @@
 
       <div>
         
-        <ul>
-<li>
-<p>Heap: Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.</p>
-</li>
-<li>
-<p>Young Generation Area:</p>
-<ul>
-<li>Eden Space: Newly created Objects goes in Eden Space.</li>
-<li>Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space.</li>
-<li>Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC. Major GC is performed when Old generation is full.</li>
-</ul>
-</li>
-<li>
-<p>Permanent Generation(PermGen): It is not part of Heap Memory area. It contains Application&rsquo;s metadeat i.e. classes and methods&rsquo;s description for JVM.</p>
-</li>
-<li>
-<p>Method Area / Class Area: Shared among all threads of an application. Also called PremGen before Java 8, It contains classes structure, constant pool, static method, static variable, constant, method codes and constructor.</p>
-</li>
-<li>
-<p>Memory Pool: String pool comes under memory pool area. It can belongs to heap or PermGen area depending upon Memory Manager implementation.</p>
-</li>
-<li>
-<p>Runtime Constant Pool: It contains class specific runtime constant of a class and static method, comes under method area.</p>
-</li>
-<li>
-<p>Stack: Static memory area and constant area, Generated for each thread, When full, We get StackOverflowError, It keeps method reference, local variables of method including argument variable and reference to local object created inside method.</p>
-</li>
-<li>
-<p>Caching: (Byte, Character, Integer, Short, Long): Will Discuss it later.</p>
-</li>
-<li>
-<p>Program Counter Register: It is generated for each thread and it stores current instruction executed by thread.</p>
-</li>
-<li>
-<p>Native Method Stack: Shared among all threads, Same as stack, but used for native method which are outside of Java.</p>
-</li>
-</ul>
-<p>Changes done in Memory Model of JVM: After Java 8 : PermGen kicked-off and MetaSpace kicked-in</p>
+        <h3 id="heap">Heap</h3>
+<p>Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.</p>
+<pre><code>- Young Generation Area:
+    - Eden Space: Newly created Objects goes in Eden Space.
+    - Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, 
+        Miner GC is performed and all survivor object moved into survivor space.
+- Old/Tenured Generation Area: 
+    The remaining objects moved into Old generation which are survivor after 
+    many cycle of miner GC. Major GC is performed when Old generation is full.
+</code></pre>
+<h3 id="permanent-generationpermgen">Permanent Generation(PermGen):</h3>
+<p>PermGen is not part of Heap Memory area. It contains Application&rsquo;s metadeat i.e. classes and methods&rsquo;s description for JVM.</p>
+<h3 id="method-area--class-area">Method Area / Class Area:</h3>
+<p>Shared among all threads of an application. Also called PremGen before Java 8, It contains classes structure, constant pool, static method, static variable, constant, method codes and constructor.</p>
+<h3 id="memory-pool">Memory Pool:</h3>
+<p>String pool comes under memory pool area. It can belongs to heap or PermGen area depending upon Memory Manager implementation.</p>
+<h3 id="runtime-constant-pool">Runtime Constant Pool:</h3>
+<p>It contains class specific runtime constant of a class and static method, comes under method area.</p>
+<h3 id="stack">Stack:</h3>
+<p>Static memory area and constant area, Generated for each thread, When full, We get StackOverflowError, It keeps method reference, local variables of method including argument variable and reference to local object created inside method.</p>
+<h3 id="caching">Caching:</h3>
+<p>(Byte, Character, Integer, Short, Long): Will Discuss it later.</p>
+<h3 id="program-counter-register">Program Counter Register:</h3>
+<p>It is generated for each thread and it stores current instruction executed by thread.</p>
+<h3 id="native-method-stack">Native Method Stack:</h3>
+<p>Shared among all threads, Same as stack, but used for native method which are outside of Java.</p>
+<h4 id="changes-done-in-memory-model-of-jvm-after-java-8">Changes done in Memory Model of JVM: After Java 8</h4>
+<p><code>PermGen kicked-off and MetaSpace kicked-in</code></p>
 <ul>
 <li>Class meta-data, interned Strings and class static variables will be moved from the permanent generation to either the Java heap or native memory.</li>
 <li>Java8 implementation move Class meta-data in native heap called MetaSpace and move interned Strings and class statics to the Java heap.</li>
@@ -216,16 +198,11 @@
 </ul>
 <p>Each Object contains:</p>
 <ul>
-<li>
-<p>Monitor</p>
-</li>
-<li>
-<p>Wait Set</p>
-</li>
-<li>
-<p>Escape Analysis (EA): It is a tool that the JIT compiler used to check the scope of the newly created object and decide weather the object will be placed in a heap or stack.</p>
-</li>
+<li>Monitor</li>
+<li>Wait Set</li>
 </ul>
+<h3 id="escape-analysis-ea">Escape Analysis (EA):</h3>
+<p>It is a tool that the JIT compiler used to check the scope of the newly created object and decide weather the object will be placed in a heap or stack.</p>
 <p>There are three type of escape states objects:</p>
 <ul>
 <li>NoEscape – When the object is not visible outside of the current method or thread.</li>
@@ -235,8 +212,8 @@
 <p>If the object is NoEscape, It will not be kept in Heap area, Instead it will reside in Stack area.</p>
 <p>If the object is NoEscape or ArgEscape, JIT compiler can revove the locking and synchronization technique to make it fast.
 e.g. If a StringBuffer is declare inside a method body It will be called NoEscape object, and JIT compile will remove locking and synchronization check on its object.</p>
-<p>Creation of PermGen 2006 : More: <a href="https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation">https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation</a></p>
-<p>Removal of PermGen 2014 : More: <a href="https://blogs.oracle.com/poonam/about-g1-garbage-collector,-permanent-generation-and-metaspace">https://blogs.oracle.com/poonam/about-g1-garbage-collector,-permanent-generation-and-metaspace</a></p>
+<p><a href="https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation">Creation of PermGen 2006</a></p>
+<p><a href="https://blogs.oracle.com/poonam/about-g1-garbage-collector,-permanent-generation-and-metaspace">Removal of PermGen 2014</a></p>
 
       </div>
 

@@ -3,8 +3,13 @@ draft = false
 date = 2020-05-31T04:21:08+05:30
 title = ""
 slug = "" 
+showthedate = false
 +++
 
-I am a software engineer with over 6 years of experience in Android App, TV & OTT development. I am a hard-working, quick-learner and innovative developer. I have strong knowledge in Data structure & Algorithm. I have worked with tier-1 client like TataSky for OTT application.
+JAVA PRINCIPLE is designed for java enthusiasts to help them quickly brush-ups the core concepts of Java programming language.
+We have provided details from The Java Language Specification book and other top resources available online and some of our research work.
 
-I am a self-motivated and techno freak guy who loves to step up to new challenges. I passionate about code optimization, memory optimization, debugging, best practices and best user experience. 
+Keep Learning ! Happy Learning !!
+
+<!--- Our core focus on code optimization, memory optimization, debugging, best practices and best user experience.
+--->

@@ -17,9 +17,8 @@
       <pubDate>Sun, 31 May 2020 03:49:42 +0530</pubDate>
       
       <guid>https://akhilesh006.github.io/javaprincipal/posts/java/java-memory-model/</guid>
-      <description>Heap: Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
-  Young Generation Area:
- Eden Space: Newly created Objects goes in Eden Space. Survivor Space: ( Two survivor space s0 &amp;amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space. Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC.</description>
+      <description>Heap Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
+- Young Generation Area:- Eden Space: Newly created Objects goes in Eden Space.- Survivor Space: ( Two survivor space s0 &amp;amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space.- Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC.</description>
     </item>
     
   </channel>
