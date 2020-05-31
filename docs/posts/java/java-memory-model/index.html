@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Akhilesh Dhar Dubey">
+    <meta name="description" content="Heap: Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
+  Young Generation Area:
+ Eden Space: Newly created Objects goes in Eden Space. Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space. Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java Memory Model"/>
+<meta name="twitter:description" content="Heap: Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
+  Young Generation Area:
+ Eden Space: Newly created Objects goes in Eden Space. Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space. Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC."/>
+
+    <meta property="og:title" content="Java Memory Model" />
+<meta property="og:description" content="Heap: Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
+  Young Generation Area:
+ Eden Space: Newly created Objects goes in Eden Space. Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space. Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://akhilesh006.github.io/javaprincipal/posts/java/java-memory-model/" />
+<meta property="article:published_time" content="2020-05-31T03:49:42+05:30" />
+<meta property="article:modified_time" content="2020-05-31T03:49:42+05:30" />
+
+
+    
+      <base href="https://akhilesh006.github.io/javaprincipal/posts/java/java-memory-model/">
+    
+    <title>
+  Java Memory Model · Java Principal
+</title>
+
+    
+      <link rel="canonical" href="https://akhilesh006.github.io/javaprincipal/posts/java/java-memory-model/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://akhilesh006.github.io/javaprincipal/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://akhilesh006.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://akhilesh006.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.71.1" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://akhilesh006.github.io/javaprincipal/">
+      Java Principal
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://akhilesh006.github.io/javaprincipal/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://akhilesh006.github.io/javaprincipal/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://akhilesh006.github.io/javaprincipal/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://akhilesh006.github.io/javaprincipal/contact/">Contact me</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://akhilesh006.github.io/javaprincipal/pt-br/">Português</a>
+            </li>
+          
+        
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Java Memory Model</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-05-31T03:49:42&#43;05:30'>
+                May 31, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="https://akhilesh006.github.io/javaprincipal/categories/java/">java</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://akhilesh006.github.io/javaprincipal/tags/java/">java</a>
+      <span class="separator">•</span>
+    <a href="https://akhilesh006.github.io/javaprincipal/tags/heap/">heap</a>
+      <span class="separator">•</span>
+    <a href="https://akhilesh006.github.io/javaprincipal/tags/stack/">stack</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <ul>
+<li>
+<p>Heap: Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.</p>
+</li>
+<li>
+<p>Young Generation Area:</p>
+<ul>
+<li>Eden Space: Newly created Objects goes in Eden Space.</li>
+<li>Survivor Space: ( Two survivor space s0 &amp; s1): When Eden space is filled, Miner GC is performed and all survivor object moved into survivor space.</li>
+<li>Old/Tenured Generation Area: The remaining objects moved into Old generation which are survivor after many cycle of miner GC. Major GC is performed when Old generation is full.</li>
+</ul>
+</li>
+<li>
+<p>Permanent Generation(PermGen): It is not part of Heap Memory area. It contains Application&rsquo;s metadeat i.e. classes and methods&rsquo;s description for JVM.</p>
+</li>
+<li>
+<p>Method Area / Class Area: Shared among all threads of an application. Also called PremGen before Java 8, It contains classes structure, constant pool, static method, static variable, constant, method codes and constructor.</p>
+</li>
+<li>
+<p>Memory Pool: String pool comes under memory pool area. It can belongs to heap or PermGen area depending upon Memory Manager implementation.</p>
+</li>
+<li>
+<p>Runtime Constant Pool: It contains class specific runtime constant of a class and static method, comes under method area.</p>
+</li>
+<li>
+<p>Stack: Static memory area and constant area, Generated for each thread, When full, We get StackOverflowError, It keeps method reference, local variables of method including argument variable and reference to local object created inside method.</p>
+</li>
+<li>
+<p>Caching: (Byte, Character, Integer, Short, Long): Will Discuss it later.</p>
+</li>
+<li>
+<p>Program Counter Register: It is generated for each thread and it stores current instruction executed by thread.</p>
+</li>
+<li>
+<p>Native Method Stack: Shared among all threads, Same as stack, but used for native method which are outside of Java.</p>
+</li>
+</ul>
+<p>Changes done in Memory Model of JVM: After Java 8 : PermGen kicked-off and MetaSpace kicked-in</p>
+<ul>
+<li>Class meta-data, interned Strings and class static variables will be moved from the permanent generation to either the Java heap or native memory.</li>
+<li>Java8 implementation move Class meta-data in native heap called MetaSpace and move interned Strings and class statics to the Java heap.</li>
+<li>By default metaspace is unlimited and GC happens after 16 MB. its limit is specified with MaxMetaspaceSize. GC internally maintains what we call as the high-water-mark for the metaspace at which collections for the Metaspace are invoked, and it gets initialized with the value specified with MetaspaceSize. The HWM value is lowered or raised depending upon the free space after a GC.</li>
+<li>The value of MaxMetaspaceFreeRatio determines how much maximum free space should be available after a GC. If the committed space available after a GC is more than MaxMetaspaceFreeRatio value, then the HWM is lowered.</li>
+<li>The code for the permanent generation in the Hotspot JVM will be removed.</li>
+</ul>
+<p>Each Thread contains:</p>
+<ul>
+<li>Stack,</li>
+<li>Program Counter(PC) register</li>
+<li>Native Stack</li>
+</ul>
+<p>Shared Things among all thread:</p>
+<ul>
+<li>Heap</li>
+<li>PermGen/ Class Area/ Method Area</li>
+</ul>
+<p>Each Object contains:</p>
+<ul>
+<li>
+<p>Monitor</p>
+</li>
+<li>
+<p>Wait Set</p>
+</li>
+<li>
+<p>Escape Analysis (EA): It is a tool that the JIT compiler used to check the scope of the newly created object and decide weather the object will be placed in a heap or stack.</p>
+</li>
+</ul>
+<p>There are three type of escape states objects:</p>
+<ul>
+<li>NoEscape – When the object is not visible outside of the current method or thread.</li>
+<li>ArgEscape – When the object is passed to a method by argument and is not visible outside of the current method or other threads.</li>
+<li>GlobalEscape – When the object is visible by outside of the method or the thread, e.g when a object is returned from a method or is declared static.</li>
+</ul>
+<p>If the object is NoEscape, It will not be kept in Heap area, Instead it will reside in Stack area.</p>
+<p>If the object is NoEscape or ArgEscape, JIT compiler can revove the locking and synchronization technique to make it fast.
+e.g. If a StringBuffer is declare inside a method body It will be called NoEscape object, and JIT compile will remove locking and synchronization check on its object.</p>
+<p>Creation of PermGen 2006 : More: <a href="https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation">https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation</a></p>
+<p>Removal of PermGen 2014 : More: <a href="https://blogs.oracle.com/poonam/about-g1-garbage-collector,-permanent-generation-and-metaspace">https://blogs.oracle.com/poonam/about-g1-garbage-collector,-permanent-generation-and-metaspace</a></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Those who don't remember the past are condemned to repeat it. - Dynamic Programming</p>
+      
+      
+      
+      
+        
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+  </body>
+
+</html>

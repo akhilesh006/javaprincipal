@@ -3,7 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://akhilesh006.github.io/javaprincipal/about/</loc>
+    <lastmod>2020-05-31T04:21:08+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://akhilesh006.github.io/javaprincipal/</loc>
+    <lastmod>2020-05-31T04:21:08+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://akhilesh006.github.io/javaprincipal/pt-br/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://akhilesh006.github.io/javaprincipal/"
+                />
+  </url>
+  
+  <url>
     <loc>https://akhilesh006.github.io/javaprincipal/categories/</loc>
+    <lastmod>2020-05-31T03:49:42+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
@@ -17,16 +38,47 @@
   </url>
   
   <url>
-    <loc>https://akhilesh006.github.io/javaprincipal/</loc>
+    <loc>https://akhilesh006.github.io/javaprincipal/tags/heap/</loc>
+    <lastmod>2020-05-31T03:49:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://akhilesh006.github.io/javaprincipal/tags/java/</loc>
+    <lastmod>2020-05-31T03:49:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://akhilesh006.github.io/javaprincipal/categories/java/</loc>
+    <lastmod>2020-05-31T03:49:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://akhilesh006.github.io/javaprincipal/posts/java/java-memory-model/</loc>
+    <lastmod>2020-05-31T03:49:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://akhilesh006.github.io/javaprincipal/posts/</loc>
+    <lastmod>2020-05-31T03:49:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://akhilesh006.github.io/javaprincipal/tags/stack/</loc>
+    <lastmod>2020-05-31T03:49:42+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://akhilesh006.github.io/javaprincipal/tags/</loc>
+    <lastmod>2020-05-31T03:49:42+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="https://akhilesh006.github.io/javaprincipal/pt-br/"
+                href="https://akhilesh006.github.io/javaprincipal/pt-br/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://akhilesh006.github.io/javaprincipal/"
+                href="https://akhilesh006.github.io/javaprincipal/tags/"
                 />
   </url>
   
@@ -41,20 +93,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://akhilesh006.github.io/javaprincipal/series/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://akhilesh006.github.io/javaprincipal/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://akhilesh006.github.io/javaprincipal/pt-br/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://akhilesh006.github.io/javaprincipal/tags/"
                 />
   </url>
   

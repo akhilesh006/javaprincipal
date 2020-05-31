@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2020-05-31T03:49:42+05:30
 title = "Java Memory Model"
 slug = "" 

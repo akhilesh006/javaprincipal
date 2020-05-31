@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java Principal</title>
+    <link>https://akhilesh006.github.io/javaprincipal/about/</link>
+    <description>Recent content on Java Principal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 31 May 2020 04:21:08 +0530</lastBuildDate>
+    
+	<atom:link href="https://akhilesh006.github.io/javaprincipal/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
