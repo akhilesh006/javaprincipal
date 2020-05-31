@@ -115,7 +115,7 @@ disqusShortname = "yourdiscussshortname"
             [[languages.en.menu.main]]
             name = "Projects"
             weight = 3
-            url = "projects/"
+            url = "https://github.com/onslabs"
 
             [[languages.en.menu.main]]
             name = "Contact me"
