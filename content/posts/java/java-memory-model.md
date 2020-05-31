@@ -12,6 +12,8 @@ categories = ["java"]
 ### Heap
 Dynamic memory area and Shared among all threads of an application. When full, We get java.lang.OutOfMemoryError.
 
+![JVM Memory Model](/jvm_memory.png)
+
     - Young Generation Area:
         - Eden Space: Newly created Objects goes in Eden Space.
         - Survivor Space: ( Two survivor space s0 & s1): When Eden space is filled, 
