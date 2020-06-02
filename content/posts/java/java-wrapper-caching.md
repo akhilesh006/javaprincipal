@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2020-05-31T19:18:47+05:30
-title = "Java Wrapper Class Caching"
+title = "Wrapper Class Caching"
 description = ""
 slug = "" 
 author = "Akhilesh Dubey"
