@@ -16,6 +16,9 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 disqusShortname = "javaprincipal"
+disqus_identifier = "javaprincipal"
+#disqus_title
+disqus_url = "https://javaprincipal.disqus.com/"
 
 [params]
   author = "Akhilesh Dhar Dubey"
