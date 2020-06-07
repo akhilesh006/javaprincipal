@@ -20,6 +20,8 @@ disqus_identifier = "javaprincipal"
 #disqus_title
 disqus_url = "https://javaprincipal.disqus.com/"
 
+googleAnalytics = "UA-168792485-1"
+
 [params]
   author = "Akhilesh Dhar Dubey"
   description = "Software Engineer at Irdeto | Android, Java Enthusiast | OTT"
