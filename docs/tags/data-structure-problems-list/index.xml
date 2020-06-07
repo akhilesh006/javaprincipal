@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data-structure-problems-list on Java Principal</title>
+    <link>https://akhilesh006.github.io/javaprincipal/tags/data-structure-problems-list/</link>
+    <description>Recent content in data-structure-problems-list on Java Principal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 Jun 2020 19:29:13 +0530</lastBuildDate>
+    
+	<atom:link href="https://akhilesh006.github.io/javaprincipal/tags/data-structure-problems-list/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tech Interview Preparation</title>
+      <link>https://akhilesh006.github.io/javaprincipal/posts/java/interview-prep-topics/</link>
+      <pubDate>Sun, 07 Jun 2020 19:29:13 +0530</pubDate>
+      
+      <guid>https://akhilesh006.github.io/javaprincipal/posts/java/interview-prep-topics/</guid>
+      <description>Tech Interview Preparation Following are the best posts of Leetcode platform on data-structure and algorithms.
+ DP for beginners by @wh0ami  LIST   Graph for beginners by @wh0ami  LIST   Sliding window for beginners by @wh0ami  LIST   DP Patterns by @aatalyk Leetcode patterns from edu_cative_dot_io by @late_riser List of questions sorted by common patterns by @Maverick2594 How to solve DP - String? Template and 4 Steps to be followed by @igooglethings Using bit manipulation to solve problems easily and efficiently by @LHearen Recursive approach to segment trees and range sum queries and lazy propagation How to use Leetcode efficiently and effectively by beginners by @megaspazz Dynamic Programming Questions thread by @karansingh1559 DP Classification helpful notes by @adityakrverma Comprehensive Data Structure and Algorithm Study Guide by @xrssa Backtracking Summary and general template to solve many problems by @dichen001 How to approach DP problems by @heroes3001 A general approach to backtracking questions by @issac3 Top 75 Leetcode questions for interview preparation curated by Blind Topic wise problems for beginners by @yashrsharma44 Sliding Window algorithm template to solve all the Leetcode substring search problem by @chaoyanghe Greedy for beginners by @wh0ami  LIST   From-good-to-great.</description>
+    </item>
+    
+  </channel>
+</rss>

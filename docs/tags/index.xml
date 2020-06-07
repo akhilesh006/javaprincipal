@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Java Principal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 May 2020 19:18:47 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2020 19:29:13 +0530</lastBuildDate>
     
 	<atom:link href="https://akhilesh006.github.io/javaprincipal/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>algorithm-problems-list</title>
+      <link>https://akhilesh006.github.io/javaprincipal/tags/algorithm-problems-list/</link>
+      <pubDate>Sun, 07 Jun 2020 19:29:13 +0530</pubDate>
+      
+      <guid>https://akhilesh006.github.io/javaprincipal/tags/algorithm-problems-list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-structure-problems-list</title>
+      <link>https://akhilesh006.github.io/javaprincipal/tags/data-structure-problems-list/</link>
+      <pubDate>Sun, 07 Jun 2020 19:29:13 +0530</pubDate>
+      
+      <guid>https://akhilesh006.github.io/javaprincipal/tags/data-structure-problems-list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interview-topics</title>
+      <link>https://akhilesh006.github.io/javaprincipal/tags/interview-topics/</link>
+      <pubDate>Sun, 07 Jun 2020 19:29:13 +0530</pubDate>
+      
+      <guid>https://akhilesh006.github.io/javaprincipal/tags/interview-topics/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>heap</title>
