@@ -34,7 +34,7 @@ Following are the best posts of Leetcode platform on data-structure and algorith
 14. [Backtracking Summary and general template to solve many problems by @dichen001](https://leetcode.com/problems/permutations/discuss/18284/Backtrack-Summary:-General-Solution-for-10-Questions)
 15. [How to approach DP problems by @heroes3001](https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems)
 16. [A general approach to backtracking questions by @issac3](https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning))
-17. [Top 75 Leetcode questions for interview preparation curated by Blind](https://leetcode.com/list/xi4ci4ig/)
+17. [Top 75 Leetcode questions for interview preparation curated by Blind](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions)
 18. [Topic wise problems for beginners by @yashrsharma44](https://leetcode.com/discuss/career/448024/Topic-wise-problems-for-Beginners)
 19. [Sliding Window algorithm template to solve all the Leetcode substring search problem by @chaoyanghe](https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem)
 20. [Greedy for beginners by @wh0ami](https://leetcode.com/discuss/general-discussion/669996/greedy-for-beginners-problems-sample-solutions)
