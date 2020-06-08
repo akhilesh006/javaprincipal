@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Competitive Programming on Java Principal</title>
+    <link>https://akhilesh006.github.io/javaprincipal/tags/competitive-programming/</link>
+    <description>Recent content in Competitive Programming on Java Principal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 08 Jun 2020 11:55:55 +0530</lastBuildDate>
+    
+	<atom:link href="https://akhilesh006.github.io/javaprincipal/tags/competitive-programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Common Tips &amp; Tricks for Competitive Programming</title>
+      <link>https://akhilesh006.github.io/javaprincipal/posts/java/common-tips-and-tricks-for-cp/</link>
+      <pubDate>Mon, 08 Jun 2020 11:55:55 +0530</pubDate>
+      
+      <guid>https://akhilesh006.github.io/javaprincipal/posts/java/common-tips-and-tricks-for-cp/</guid>
+      <description>Common Tips &amp;amp; Tricks for Competitive Programming. Big-O: Time Complexity Order O(1) &amp;lt; O(log n) &amp;lt; O(\sqrt{n}) &amp;lt; n &amp;lt; n log n &amp;lt; n&amp;lt;sup&amp;gt;2&amp;lt;/sup&amp;gt; &amp;lt; n&amp;lt;sup&amp;gt;3&amp;lt;/sup&amp;gt; ... &amp;lt; 2&amp;lt;sup&amp;gt;n&amp;lt;/sup&amp;gt; &amp;lt; 3&amp;lt;sup&amp;gt;n&amp;lt;/sup&amp;gt; ... &amp;lt; n! &amp;lt; n&amp;lt;sup&amp;gt;n&amp;lt;/sup&amp;gt;   nCr   If you have a list of numbers and wants to count the number of pair can be formed in a list. e.g. Problem Statement : CodeChef : PLMU</description>
+    </item>
+    
+  </channel>
+</rss>

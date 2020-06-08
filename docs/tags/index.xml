@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Java Principal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Jun 2020 19:29:13 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2020 11:55:55 +0530</lastBuildDate>
     
 	<atom:link href="https://akhilesh006.github.io/javaprincipal/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Competitive Programming</title>
+      <link>https://akhilesh006.github.io/javaprincipal/tags/competitive-programming/</link>
+      <pubDate>Mon, 08 Jun 2020 11:55:55 +0530</pubDate>
+      
+      <guid>https://akhilesh006.github.io/javaprincipal/tags/competitive-programming/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>algorithm-problems-list</title>

@@ -1,10 +1,10 @@
 +++ 
 draft = false
 date = 2020-06-08T11:55:55+05:30
-title = ""
+title = "Common Tips & Tricks for Competitive Programming"
 description = ""
 slug = "" 
-tags = []
+tags = ["Competitive Programming"]
 categories = []
 externalLink = ""
 series = []
