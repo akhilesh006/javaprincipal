@@ -26,7 +26,7 @@ We can be modified this range only for Integer by using a VM argument -XX:AutoBo
 ``` java
 
     Integer x = 10; //autoboxing
-    Integer y = Integer.valueOf(10); //inside story
+    Integer y = Integer.valueOf(10); // Compiler converts 10 to Integer.valueOf(10) when doing autoboxing.
     Integer z = new Integer(100);
     
     System.out.println(x == y); // true
