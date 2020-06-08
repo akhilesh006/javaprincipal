@@ -14,11 +14,10 @@ showthedate = true
 ### Common Tips & Tricks for Competitive Programming.
 
 ### Big-O: Time Complexity Order
-```
-O(1) < O(log n) < O(\sqrt{n}) < n < n log n < n<sup>2</sup> < n<sup>3</sup> ... < 2<sup>n</sup> < 3<sup>n</sup> ... < n! < n<sup>n</sup>
-```
 
-- #### <sup>n</sup>C<sub>r</sub>
+O(1) < O(log n) < O(\sqrt{n}) < n < n log n < n<sup>2</sup> < n<sup>3</sup> ... < 2<sup>n</sup> < 3<sup>n</sup> ... < n! < n<sup>n</sup>
+
+#### <sup>n</sup>C<sub>r</sub>
 
 If you have a list of numbers and wants to count the number of pair can be formed in a list. 
 e.g. 
@@ -33,6 +32,7 @@ and add them, this will be the answer.
 
 Formula: 
 
+- ^nC_r = n! / r! * (n - r)!
 - <sup>n</sup>C<sub>r</sub> = n! / r! * (n - r)!
 - <sup>n</sup>C<sub>0</sub> = 1
 - <sup>n</sup>C<sub>n</sub> = 1
