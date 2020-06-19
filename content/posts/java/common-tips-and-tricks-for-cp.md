@@ -15,9 +15,9 @@ showthedate = true
 
 ### Big-O: Time Complexity Order
 
-O(1) < O(log n) < O(\sqrt{n}) < n < n log n < n<sup>2</sup> < n<sup>3</sup> ... < 2<sup>n</sup> < 3<sup>n</sup> ... < n! < n<sup>n</sup>
+O(1) < O(log n) < O(sqrt n) < n < n log n < n^2 < n^3 ... < 2^n < 3^n ... < n! < n^n
 
-#### <sup>n</sup>C<sub>r</sub>
+#### nCr
 
 If you have a list of numbers and wants to count the number of pair can be formed in a list. 
 e.g. 
@@ -27,18 +27,17 @@ A[i]+A[j] = A[i]*A[j].
 
 Only 2 and 0 will satisfy the above condition.
 So, Count the number of 2s let say n and 0s ley say m in the input array,
-and calculate the <sup>n</sup>C<sub>2</sub> and <sup>m</sup>C<sub>2</sub>.
+and calculate the nC2 and mC2.
 and add them, this will be the answer.
 
 Formula: 
 
-- ^nC_r = n! / r! * (n - r)!
-- <sup>n</sup>C<sub>r</sub> = n! / r! * (n - r)!
-- <sup>n</sup>C<sub>0</sub> = 1
-- <sup>n</sup>C<sub>n</sub> = 1
-- <sup>n</sup>C<sub>1</sub> = n
+- nCr = n! / r! * (n - r)!
+- nC0 = 1
+- nCn = 1
+- nC1 = n
 - 0! = 1
-- <sup>n</sup>C<sub>r</sub> = <sup>n</sup>C<sub>n-r</sub>
+- nCr = nCn-r
 
 ```java
     // Using DP

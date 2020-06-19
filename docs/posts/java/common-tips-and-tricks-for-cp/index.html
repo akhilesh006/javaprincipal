@@ -7,17 +7,20 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Akhilesh Dhar Dubey">
-    <meta name="description" content="Common Tips &amp; Tricks for Competitive Programming. Big-O: Time Complexity Order O(1) &lt; O(log n) &lt; O(\sqrt{n}) &lt; n &lt; n log n &lt; n2&lt; n3&hellip; &lt; 2n&lt; 3n&hellip; &lt; n! &lt; nnnCr If you have a list of numbers and wants to count the number of pair can be formed in a list. e.g. Problem Statement : CodeChef : PLMU
+    <meta name="description" content="Common Tips &amp; Tricks for Competitive Programming. Big-O: Time Complexity Order O(1) &lt; O(log n) &lt; O(sqrt n) &lt; n &lt; n log n &lt; n^2 &lt; n^3 &hellip; &lt; 2^n &lt; 3^n &hellip; &lt; n! &lt; n^n
+nCr If you have a list of numbers and wants to count the number of pair can be formed in a list. e.g. Problem Statement : CodeChef : PLMU
  Given an array of N integers, find the number of pairs of (i,j) that satisfies the condition A[i]&#43;A[j] = A[i]*A[j].">
     <meta name="keywords" content="java, blog, deep learning">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Common Tips &amp; Tricks for Competitive Programming"/>
-<meta name="twitter:description" content="Common Tips &amp; Tricks for Competitive Programming. Big-O: Time Complexity Order O(1) &lt; O(log n) &lt; O(\sqrt{n}) &lt; n &lt; n log n &lt; n2&lt; n3&hellip; &lt; 2n&lt; 3n&hellip; &lt; n! &lt; nnnCr If you have a list of numbers and wants to count the number of pair can be formed in a list. e.g. Problem Statement : CodeChef : PLMU
+<meta name="twitter:description" content="Common Tips &amp; Tricks for Competitive Programming. Big-O: Time Complexity Order O(1) &lt; O(log n) &lt; O(sqrt n) &lt; n &lt; n log n &lt; n^2 &lt; n^3 &hellip; &lt; 2^n &lt; 3^n &hellip; &lt; n! &lt; n^n
+nCr If you have a list of numbers and wants to count the number of pair can be formed in a list. e.g. Problem Statement : CodeChef : PLMU
  Given an array of N integers, find the number of pairs of (i,j) that satisfies the condition A[i]&#43;A[j] = A[i]*A[j]."/>
 
     <meta property="og:title" content="Common Tips &amp; Tricks for Competitive Programming" />
-<meta property="og:description" content="Common Tips &amp; Tricks for Competitive Programming. Big-O: Time Complexity Order O(1) &lt; O(log n) &lt; O(\sqrt{n}) &lt; n &lt; n log n &lt; n2&lt; n3&hellip; &lt; 2n&lt; 3n&hellip; &lt; n! &lt; nnnCr If you have a list of numbers and wants to count the number of pair can be formed in a list. e.g. Problem Statement : CodeChef : PLMU
+<meta property="og:description" content="Common Tips &amp; Tricks for Competitive Programming. Big-O: Time Complexity Order O(1) &lt; O(log n) &lt; O(sqrt n) &lt; n &lt; n log n &lt; n^2 &lt; n^3 &hellip; &lt; 2^n &lt; 3^n &hellip; &lt; n! &lt; n^n
+nCr If you have a list of numbers and wants to count the number of pair can be formed in a list. e.g. Problem Statement : CodeChef : PLMU
  Given an array of N integers, find the number of pairs of (i,j) that satisfies the condition A[i]&#43;A[j] = A[i]*A[j]." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://akhilesh006.github.io/javaprincipal/posts/java/common-tips-and-tricks-for-cp/" />
@@ -134,8 +137,8 @@
         
         <h3 id="common-tips--tricks-for-competitive-programming">Common Tips &amp; Tricks for Competitive Programming.</h3>
 <h3 id="big-o-time-complexity-order">Big-O: Time Complexity Order</h3>
-<p>O(1) &lt; O(log n) &lt; O(\sqrt{n}) &lt; n &lt; n log n &lt; n<!-- raw HTML omitted -->2<!-- raw HTML omitted --> &lt; n<!-- raw HTML omitted -->3<!-- raw HTML omitted --> &hellip; &lt; 2<!-- raw HTML omitted -->n<!-- raw HTML omitted --> &lt; 3<!-- raw HTML omitted -->n<!-- raw HTML omitted --> &hellip; &lt; n! &lt; n<!-- raw HTML omitted -->n<!-- raw HTML omitted --></p>
-<h4 id="supnsupcsubrsub"><!-- raw HTML omitted -->n<!-- raw HTML omitted -->C<!-- raw HTML omitted -->r<!-- raw HTML omitted --></h4>
+<p>O(1) &lt; O(log n) &lt; O(sqrt n) &lt; n &lt; n log n &lt; n^2 &lt; n^3 &hellip; &lt; 2^n &lt; 3^n &hellip; &lt; n! &lt; n^n</p>
+<h4 id="ncr">nCr</h4>
 <p>If you have a list of numbers and wants to count the number of pair can be formed in a list. 
 e.g. 
 <a href="https://www.codechef.com/DEC19B/problems/PLMU">Problem Statement : CodeChef : PLMU</a></p>
@@ -145,17 +148,16 @@ A[i]+A[j] = A[i]*A[j].</li>
 </ul>
 <p>Only 2 and 0 will satisfy the above condition.
 So, Count the number of 2s let say n and 0s ley say m in the input array,
-and calculate the <!-- raw HTML omitted -->n<!-- raw HTML omitted -->C<!-- raw HTML omitted -->2<!-- raw HTML omitted --> and <!-- raw HTML omitted -->m<!-- raw HTML omitted -->C<!-- raw HTML omitted -->2<!-- raw HTML omitted -->.
+and calculate the nC2 and mC2.
 and add them, this will be the answer.</p>
 <p>Formula:</p>
 <ul>
-<li>^nC_r = n! / r! * (n - r)!</li>
-<li><!-- raw HTML omitted -->n<!-- raw HTML omitted -->C<!-- raw HTML omitted -->r<!-- raw HTML omitted --> = n! / r! * (n - r)!</li>
-<li><!-- raw HTML omitted -->n<!-- raw HTML omitted -->C<!-- raw HTML omitted -->0<!-- raw HTML omitted --> = 1</li>
-<li><!-- raw HTML omitted -->n<!-- raw HTML omitted -->C<!-- raw HTML omitted -->n<!-- raw HTML omitted --> = 1</li>
-<li><!-- raw HTML omitted -->n<!-- raw HTML omitted -->C<!-- raw HTML omitted -->1<!-- raw HTML omitted --> = n</li>
+<li>nCr = n! / r! * (n - r)!</li>
+<li>nC0 = 1</li>
+<li>nCn = 1</li>
+<li>nC1 = n</li>
 <li>0! = 1</li>
-<li><!-- raw HTML omitted -->n<!-- raw HTML omitted -->C<!-- raw HTML omitted -->r<!-- raw HTML omitted --> = <!-- raw HTML omitted -->n<!-- raw HTML omitted -->C<!-- raw HTML omitted -->n-r<!-- raw HTML omitted --></li>
+<li>nCr = nCn-r</li>
 </ul>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#007f7f">// Using DP
 </span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">int</span>[][] cr = <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">int</span>[33][33];
