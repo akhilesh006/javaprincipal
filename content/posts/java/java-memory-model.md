@@ -78,3 +78,6 @@ If the object is NoEscape or ArgEscape, JIT compiler can revove the locking and 
 [Creation of PermGen 2006](https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation)
 
 [Removal of PermGen 2014](https://blogs.oracle.com/poonam/about-g1-garbage-collector,-permanent-generation-and-metaspace)
+
+One of my old answer on StackOverflow:
+[How is an object stored in heap](https://stackoverflow.com/questions/22388079/how-is-an-object-stored-in-heap/22388589#22388589)
